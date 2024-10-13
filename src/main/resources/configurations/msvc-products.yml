@@ -6,7 +6,7 @@ spring:
     name: msvc-products
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: postgresql://postgres:JeSnxYamQEHXIrlmakrKEUIipaGJzjZN@postgres.railway.internal:5432/railway
+    url: jdbc:postgresql://postgres.railway.internal:5432/railway
     username: postgres
     password: JeSnxYamQEHXIrlmakrKEUIipaGJzjZN
   jpa:
@@ -30,7 +30,7 @@ logging:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: http://eureka.railway.app/eureka
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka.railway.app/eureka
